@@ -5,12 +5,12 @@ Disclaimer z tak wygenerowanego API clienta możemy korzystać też na backendzi
 ### Agenda
 
 1. [Wprowadzenie, skąd pomysł](#ad-1-wprowadzenie-sk%C4%85d-pomys%C5%82)
-1. Krótkie omówienie servera nodejs z którego serwowane jest API
-1. Generowanie typów TypeScript i http client na podstawie Swagger/OAS API
+1. [Krótkie omówienie servera nodejs z którego serwowane jest API](#ad-2-kr%C3%B3tkie-om%C3%B3wienie-servera-nodejs-z-kt%C3%B3rego-serwowane-jest-api)
+1. [Generowanie typów TypeScript i http client na podstawie Swagger/OAS API](#ad-3-generowanie-typ%C3%B3w-typescript-i-http-client-na-podstawie-swaggeroas-api)
 1. [Codegen Generator dla GraphQL](#ad-3-generowanie-typ%C3%B3w-typescript-i-http-client-na-podstawie-swaggeroas-api)
-1. Przykładowe wykorzystanie w aplikacji reactowej przy użyciu biblioteki React Query, Apollo Client
-1. Jak wspomóc się apkami Postman i Altair
-1. Podsumowanie
+1. [Przykładowe wykorzystanie w aplikacji reactowej przy użyciu biblioteki React Query, Apollo Client](#ad-4-codegen-generator-dla-graphql)
+1. [Jak wspomóc się apkami Postman i Altair](#ad-6-tooling-jak-wspom%C3%B3c-si%C4%99-apkami-postman-i-altair)
+1. [Podsumowanie](#podsumowanie)
 
 2. [Fun] Swagger/OAS konwertowalny do graphql schema
 GraphQLSchema
