@@ -4,10 +4,10 @@ Disclaimer z tak wygenerowanego API clienta możemy korzystać też na backendzi
 
 ### Agenda
 
-1. Wprowadzenie, skąd pomysł
+1. [Wprowadzenie, skąd pomysł](#ad-1-wprowadzenie-sk%C4%85d-pomys%C5%82)
 1. Krótkie omówienie servera nodejs z którego serwowane jest API
 1. Generowanie typów TypeScript i http client na podstawie Swagger/OAS API
-1. Codegen Generator dla GraphQL
+1. [Codegen Generator dla GraphQL](#ad-3-generowanie-typ%C3%B3w-typescript-i-http-client-na-podstawie-swaggeroas-api)
 1. Przykładowe wykorzystanie w aplikacji reactowej przy użyciu biblioteki React Query, Apollo Client
 1. Jak wspomóc się apkami Postman i Altair
 1. Podsumowanie
