@@ -16,7 +16,7 @@
 
 Z perspektywy frontendowca
 Pod koniec ubiegłego roku jeden z naszych klientów dał nam dosyć krótki deadline na realizację projektu.
-Były to mniej niecałe 2 miesiące, które ostatecznie zostały przedłużone do 3. 
+Były to mniej więcej niecałe 2 miesiące, które ostatecznie zostały przedłużone do 3. 
 Backend nie był przygotowany, w zasadzie nic nie było, a wszystkie zespoły w projekcie pracowały równolegle.
 Ustalenia z klientem często się zmieniały, a co za tym idzie kontrakt pomiędzy BE a FE. 
 Wiedzieliśmy, że żeby wyrobić się w terminie(gdzie kolejne iteracje trwały nawet 4 dni) będziemy potrzebować sposobu na przyspieszenie developmentu.
@@ -184,27 +184,25 @@ Sprawdziłem 3 biblioteki do rzutowania OAS v2 v3
 
 ### Ad. 7. Podsumowanie
 
-
-#### Wady i zalety
+#### Wady i zalety Generatorów
 
 *Pros*
-- Setup, modyfikacja headerów requestu jest easy peasy zarówno dla `react-query` jak i `@apollo/client`
+- Kontrakt API to źródło prawdy dla aplikacji na froncie
 - Poprawne typy
-- Błędy w czasie kompilacji kodu, a nie w runtime
 - Uderzamy do właściwych endpointów API
 - Używamy prawidłowych parametrów
 - Jeśli gdzieś jest błąd to najpewniej na backendzie
 - Z łatwością interpretujemy response requestu
 - Z łatwością jesteśmy w stanie zweryfikować zmiany, które nastąpiły w API
+- [typescript] Błędy w czasie kompilacji kodu, a nie w runtime
 - Oszczędność czasu, nie musimy się martwić refactorem, martwym kodem, naprawą błędów, niepoprawnymi typami
-- Kontrakt API to źródło prawdy dla aplikacji na froncie
 - Mamy świadomość, że nasz codebase, a przynajmniej codebase naszego API jest niezawodny :)
 
 *Cons*
 - Raczej dla małych teamów 
   - Konieczność przeładowania/ponownej generacji typów i clienta http przy zmianie kontraktu przez backend
 - Może być uciążliwe dla dużych zespołów
-  - Paczka z typami i clientem mogłaby być wystawiana zaraz obok nowej wersji backendu (integracja CI/CD)
+  - [solution] Paczka z typami i clientem mogłaby być wystawiana zaraz obok nowej wersji backendu (integracja CI/CD)
 
 
 #### Do poczytania / Linki
