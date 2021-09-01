@@ -1,0 +1,26 @@
+.add-new-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-text, .input-select, .input-textarea {
+  padding: 0.5rem;
+  border: 3px solid #eee;
+  border-radius: 6px;
+
+  &::placeholder {
+    letter-spacing: 1px;
+    color: rgba(0,0,0, .35);
+    font: {
+      family: 'Lato', sans-serif;
+      style: italic;
+      size: 12px;
+    }
+  }
+}
+
+.input-textarea {
+  width: 100%;
+  resize: none;
+}

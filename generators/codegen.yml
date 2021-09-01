@@ -1,0 +1,25 @@
+schema: https://g9n41.sse.codesandbox.io/graphql
+documents: ./operations.graphql
+config:
+  fetcher:
+    endpoint: https://g9n41.sse.codesandbox.io/graphql
+    fetchParams:
+      headers:
+        Content-Type: application/json
+generates:
+  ./generated/graphql-codegen-types.ts:
+    plugins:
+      - typescript
+  ./generated/graphql-codegen-typegraphql.ts:
+    plugins:
+      - typescript-type-graphql
+  ./generated/graphql-codegen-react-query-api.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+  ./generated/graphql-codegen-react-apollo-api.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
