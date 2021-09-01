@@ -2,17 +2,15 @@ import React, { FC } from 'react';
 // import { CalendarEvent } from 'generated/swagger-typescript-api';
 import { BaseCalendarEvent, Optional } from 'types';
 import { isEventNow, getRemainingTimeInfo } from './CalendarEvent.helpers';
-import {
-    useCalendarEventsQuery,
-    CalendarEvent,
-} from 'generated/graphql-codegen-react-query-api';
+
+
 
 interface EventProps<T> {
     event: Optional<T>;
     hot: boolean;
 }
 
-export const Event: FC<{ event: CalendarEvent, hot: boolean }> = ({ event, hot }) => {
+export const Event = <T extends BaseCalendarEvent>({ event, hot }: EventProps<T>) => {
     if (!event) {
         return null;
     }

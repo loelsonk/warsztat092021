@@ -41,7 +41,7 @@ const requestMapper = (calendarId: string, entries: { [key: string]: string; }):
     return  {
         calendarId,
         name: entries.name,
-        description: entries.name,
+        description: entries.description,
         ...getRequestDates(entries),
     };
 }
@@ -98,7 +98,7 @@ export const AddNewEventForm: FC<{ calendarId: string }> = ({ calendarId }) => {
             e.preventDefault();
             // 🟢🟢🟢 React-Query Swagger API 🟢🟢🟢
             // 🔴🔴🔴 React-Query GraphQL API graphql 🔴🔴🔴
-            // mutate(requestMapper(calendarId, Object.fromEntries(formValuesRef.current)));
+            mutate(requestMapper(calendarId, Object.fromEntries(formValuesRef.current)));
             // 🟣🟣🟣 React-Apollo GraphQL API 🟣🟣🟣
             // mutate({
             //     variables: requestMapper(calendarId, Object.fromEntries(formValuesRef.current)),
