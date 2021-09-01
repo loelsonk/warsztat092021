@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1899a072-0472-4c16-9ef8-be884c6868b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generators/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/generators" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code With Me" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -72,10 +72,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/generators" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/client-app/src" />
       <recent name="$PROJECT_DIR$/client-app" />
-      <recent name="$PROJECT_DIR$/generators" />
       <recent name="$PROJECT_DIR$/client-app/src/components/CalendarEvents/components/CalendarEvent" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -156,7 +156,7 @@
       <workItem from="1629488088895" duration="156000" />
       <workItem from="1629535700801" duration="30906000" />
       <workItem from="1630324999271" duration="508000" />
-      <workItem from="1630326542445" duration="49671000" />
+      <workItem from="1630326542445" duration="49710000" />
     </task>
     <servers />
   </component>
