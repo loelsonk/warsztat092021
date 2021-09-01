@@ -2,6 +2,7 @@
 
 ### Agenda
 
+0. [TLDR](#ad-0-tldr)
 1. [Wprowadzenie, skąd pomysł](#ad-1-wprowadzenie-sk%C4%85d-pomys%C5%82)
 1. [Krótkie omówienie servera nodejs z którego serwowane jest API](#ad-2-kr%C3%B3tkie-om%C3%B3wienie-servera-nodejs-z-kt%C3%B3rego-serwowane-jest-api)
 1. [Generowanie typów TypeScript i http client na podstawie Swagger/OAS API](#ad-3-generowanie-typ%C3%B3w-typescript-i-http-client-na-podstawie-swaggeroas-api)
@@ -11,6 +12,11 @@
 1. [Podsumowanie](#podsumowanie)
    
 ----
+
+### Ad 0. TLDR
+
+- codesandbox backend: https://codesandbox.io/s/tsed-swagger-graphql-092021-g9n41
+- codesandbox frontend: https://codesandbox.io/s/gifted-bird-go7vs
 
 ### Ad 1. Wprowadzenie, skąd pomysł
 
@@ -23,6 +29,8 @@ Wiedzieliśmy, że żeby wyrobić się w terminie(gdzie kolejne iteracje trwały
 
 Z perspektywy backendowca
 Nieotypowane resolvery servera Apollo GraphQL. Typy generujemy ze schemy, która jest źródłem prawdy.
+
+![](https://img.ifunny.co/images/77050e456e93a6bdadd2d3fd946eac39b30e1d3b1518c4b7f542cc41d8ff6eac_1.jpg)
 
 #### Słowniczek
 
@@ -39,7 +47,7 @@ Nieotypowane resolvery servera Apollo GraphQL. Typy generujemy ze schemy, która
     - `Mongoose` - narzędzie do modelowania baz MongoDB / ODM (Object Data Modeling)
 ----
 
-### Ad. 2. Krótkie omówienie servera nodejs z którego serwowane jest API
+### Ad 2. Krótkie omówienie servera nodejs z którego serwowane jest API
 
 - Sandbox https://codesandbox.io/s/tsed-swagger-graphql-092021-g9n41
 - Potrzebujesz jedynie instancji bazy danych mongodb, darmową możesz założyć na https://www.mongodb.com/cloud (btw. mlab.com został przejęty przez mongodb.com)
@@ -90,6 +98,7 @@ generateApi({
 ```
 
 Za każdym razem kiedy zmieniany jest kontrakt z backendem powinniśmy wygenerować na nowo typy i klienta
+
 ----
 
 ### Ad 4. Codegen Generator dla GraphQL
@@ -150,6 +159,9 @@ linki:
 ### Ad 5. Przykładowe wykorzystanie w aplikacji reactowej przy użyciu biblioteki React Query, Apollo Client
 
 codesandbox aplikacji frontowej:
+https://codesandbox.io/s/gifted-bird-go7vs
+
+![](https://img.ifunny.co/images/abc5076a024122ffa0174065886821b15a905856dc6595619db482812e531d2f_1.webp)
 
 linki:
 - https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm/ Apollo Devtools
@@ -160,7 +172,14 @@ linki:
 
 #### Postman
 
-tba: postman
+Wspomaganie na przykładzie importowania [schema.json](https://g9n41.sse.codesandbox.io/v3/docs/swagger.json) swaggera do postmana
+
+1. Klikamy `Import` z pliku lub linku
+1. Profit, w `Collections` otrzymujemy pogrupowane i sparametryzowane endpointy
+1. Pozostaje tylko przygotowanie środowiska dla zaimportowanego API i gotowe
+
+Link do webinaru z Tłustego czwartku [APIs 101 with Postman (for Beginners) [ENG]](https://billenniumspzoo.sharepoint.com/sites/HR/LearningAndDevelopment/SitePages/Szkolenia/pl/Akademia-wiedzy.aspx#apis-101-with-postman-%28for-beginners%29
+)
 
 #### Altair
 
@@ -169,8 +188,8 @@ Podobny w użytkowaniu do Postmana, który to do GraphQL nie nadaje się z jedne
 - braku automatycznego odświeżania schemy po jej zmianie, nie jest wykorzystywana introspekcja doców.
 - schemę musimy w Postmanie kopiować ręcznie, aby mieć namiastkę introspekcji
 
-#### OAS->GraphQL
-Istnieją generatory mapujące OAS na schemy GraphQL, SDLki, czy JSowe obiekty schemy
+#### Generatory OAS do GraphQL
+Istnieją generatory mapujące OAS na schemę GraphQL - SDL, czy corowy obiekt `GraphQLSchema`
 
 Przy bardziej złożonych schemach OAS nie będziemy w stanie zmapować 1:1
 Generator z pewnością może nam pomóc w developmencie, ale nie możemy zakładać, że wykona za nas całą robotę.
@@ -179,6 +198,8 @@ Sprawdziłem 3 biblioteki do rzutowania OAS v2 v3
 - `swagger-to-graphql` (jedynie OAS v2)
 - `swagql`
 - `openapi-to-graphql`
+
+i najlepiej radzi sobie `openapi-to-graphql`
 
 ----
 
@@ -214,6 +235,7 @@ Sprawdziłem 3 biblioteki do rzutowania OAS v2 v3
 - https://openapi-generator.tech/
 - https://tsed.io/
 
+![](https://i.imgur.com/RrzBX7A.png)
 
 
 
