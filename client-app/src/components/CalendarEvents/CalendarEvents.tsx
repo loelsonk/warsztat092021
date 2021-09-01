@@ -9,30 +9,30 @@ import {
 } from 'generated/swagger-typescript-api';
 // 🔴🔴🔴 React-Query GraphQL API graphql 🔴🔴🔴
 import {
-    // useCalendarEventsQuery,
-    // CalendarEvent,
-} from 'generated/graphql-codegen-react-query-api';
-import {
     useCalendarEventsQuery,
     CalendarEvent,
+} from 'generated/graphql-codegen-react-query-api';
+import {
+    // useCalendarEventsQuery,
+    // CalendarEvent,
 } from 'generated/graphql-codegen-react-apollo-api';
 import { BaseCalendarEvent, Optional } from 'types';
 import { Event } from './components/CalendarEvent';
 
 export function CalendarEvents({ calendarId }: { calendarId: string }) {
     // 🟢🟢🟢 React-Query Swagger API 🟢🟢🟢
-    const { data: events } = useQuery<HttpResponse<CalendarEvent[]>, Error, CalendarEvent[]>(
-        ['calendarEvents', calendarId], () => ApiInstance.rest.eventsCtrlGetEvents(calendarId), {
-            enabled: !!calendarId,
-            staleTime: Infinity,
-        });
+    // const { data: events } = useQuery<HttpResponse<CalendarEvent[]>, Error, CalendarEvent[]>(
+    //     ['calendarEvents', calendarId], () => ApiInstance.rest.eventsCtrlGetEvents(calendarId), {
+    //         enabled: !!calendarId,
+    //         staleTime: Infinity,
+    //     });
 
     // 🔴🔴🔴 React-Query GraphQL API graphql 🔴🔴🔴
-    // const { data: { calendarEvents: events } = {} } = useCalendarEventsQuery({ calendarId }, {
-    //     enabled: !!calendarId,
-    //     staleTime: Infinity,
-    //     select: (data) => data,
-    // });
+    const { data: { calendarEvents: events } = {} } = useCalendarEventsQuery({ calendarId }, {
+        enabled: !!calendarId,
+        staleTime: Infinity,
+        select: (data) => data,
+    });
 
     // 🟣🟣🟣 React-Apollo GraphQL API 🟣🟣🟣
     // const { data: { calendarEvents: events } = {} } = useCalendarEventsQuery({

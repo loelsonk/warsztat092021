@@ -13,15 +13,15 @@ function App() {
     const todayFormattedDate = date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' });
 
     // 🟢🟢🟢 React-Query Swagger API 🟢🟢🟢
-    // const {
-    //     data,
-    //     isLoading: isLoadingCalendar,
-    //     isLoadingError: isLoadingCalendarError
-    // } = useQuery<HttpResponse<Calendar[]>, Error, Calendar[]>(
-    //     'calendars',
-    //     () => ApiInstance.rest.calendarsCtrlGetAllCalendars(),
-    //     { staleTime: Infinity }
-    // );
+    const {
+        data,
+        isLoading: isLoadingCalendar,
+        isLoadingError: isLoadingCalendarError
+    } = useQuery<HttpResponse<Calendar[]>, Error, Calendar[]>(
+        'calendars',
+        () => ApiInstance.rest.calendarsCtrlGetAllCalendars(),
+        { staleTime: Infinity }
+    );
 
     // 🔴🔴🔴 React-Query GraphQL API graphql 🔴🔴🔴
     // const {
@@ -31,24 +31,24 @@ function App() {
     // } = useCalendarsQuery({}, { staleTime: Infinity, select: (data) => data });
 
     // 🟣🟣🟣 React-Apollo GraphQL API 🟣🟣🟣
-    const {
-        data,
-        loading: isLoadingCalendar,
-        error: isLoadingCalendarError,
-    } = useApolloCalendarsQuery();
+    // const {
+    //     data,
+    //     loading: isLoadingCalendar,
+    //     error: isLoadingCalendarError,
+    // } = useApolloCalendarsQuery();
 
     const randomCalendar = useMemo(() => {
-        if (!data?.calendars) {
+        if (!data) {
             return;
         }
 
-        return data?.calendars[Math.floor(Math.random()*data?.calendars.length)];
+        return data[Math.floor(Math.random()*data.length)];
     }, [
         // 🟢🟢🟢 React-Query Swagger API 🟢🟢🟢
-        // data
+        data
         // 🔴🔴🔴 React-Query GraphQL API graphql 🔴🔴🔴
         // 🟣🟣🟣 React-Apollo GraphQL API 🟣🟣🟣
-        data?.calendars
+        // data?.calendars
     ]);
 
     const randomCalendarId = randomCalendar?.id || '';

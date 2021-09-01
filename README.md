@@ -160,7 +160,7 @@ linki:
 
 #### Postman
 
-Świetnie można pracować z Swagger/OAS api. 
+tba: postman
 
 #### Altair
 
